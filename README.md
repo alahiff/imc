@@ -21,6 +21,10 @@ IMC allows for hierarchical cloud bursting. A simple example would be to burst f
 
 ![Hierarchical cloud bursting](cloudbursting.png)
 
+A more complex example is shown below. In this case, once the local cloud is full, new infrastructure will be deployed on clouds in the "national" region. Once these are full any new infrastructure will be deployed in clouds in the "Europe" region. And finally if these also become full clouds in the "public" region will be used.
+
+![Hierarchical cloud bursting with regions](hcb-regions.png)
+
 ## Configuration
 A JSON document in the following form is used to provide static information about known clouds to OPA:
 ```json
