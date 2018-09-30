@@ -1,9 +1,9 @@
 # IMC
 
-It is frequently assumed that when you're using a cloud you have access to an essentially infinite amount of resources, however this is not always the case! IMC is for situations when you have access to multiple small clouds and you need a tool which can deploy and configure virtual infrastructure on automatically-selected clouds. It also automatically handles deployment failures.
+It is frequently assumed that when you're using a cloud you have access to an essentially infinite amount of resources, however this is not always the case. IMC is for situations when you have access to multiple small clouds and you need a tool which can deploy and configure virtual infrastructure on automatically-selected clouds, and also automatically handle deployment failures.
 
 Features include:
-* selection of clouds which meets specified requirements
+* selection of clouds which meet specified requirements
   * e.g. I want to deploy a CentOS 7 VM with at least 8 cores and 32 GB of RAM
 * clouds are ranked based on specified preferences
   * e.g. I would prefer my VMs to be deployed on my local private cloud, but if that is full try my national research cloud, but if that is also full then use a public cloud
@@ -15,4 +15,6 @@ IMC uses [Infrastructure Manager](https://github.com/grycap/im) to deploy and co
 
 ![Architecture](imc.png)
 
+IMC allows for "hierarchical cloud bursting"
 
+![Hierarchical cloud bursting](hcb.png)
