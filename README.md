@@ -22,3 +22,8 @@ IMC allows for hierarchical cloud bursting. A simple example would be to burst f
 ![Hierarchical cloud bursting](cloudbursting.png)
 
 ## Deployment
+
+## Setup
+
+## Usage
+
