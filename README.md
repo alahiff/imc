@@ -61,6 +61,8 @@ Configuration for a single cloud has the form:
 ```
 The image name should be in a form directly useable by IM, for example `gce://europe-west2-c/centos-7` (for Google) or `ost://<openstack-endpoint>/<id>` (for OpenStack). Meta-data is provided for each image to easily enable users to select a standard Linux distribution image at any site, e.g. CentOS 7 or Ubuntu 16.04, without needing to know in advance the image name at each site.
 
+An example clouds configuration file is provided: `policies/clouds.json`.
+
 ## Deployment
 
 ## Usage
