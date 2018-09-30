@@ -40,23 +40,24 @@ A JSON document in the following form is used to provide static information abou
 Configuration for a single cloud has the form:
 ```json
 {
-   "name":"...",
-   "region":"...",
+   "name":"<name>",
+   "region":"<region>",
    "quotas":{
        "cores":i,
        "instances":j
    },
    "images":{
-       "id":{
-           "name":"...",
-           "architecture":"...",
-           "distribution":"...",
-           "type":"...",
-           "version":"..."
+       "<id>":{
+           "name":"<name>",
+           "architecture":"<arch>",
+           "distribution":"<dist>",
+           "type":"<type>",
+           "version":"<version>"
         }   
    },
    "flavours":{
-       "flavour":{
+       "<id>":{
+           "name":"<name>",
            "cores":i,
            "memory":j
        } 
