@@ -21,6 +21,46 @@ IMC allows for hierarchical cloud bursting. A simple example would be to burst f
 
 ![Hierarchical cloud bursting](cloudbursting.png)
 
+## Configuration
+A JSON document in the following form is used to provide static information about known clouds to OPA:
+```json
+{
+   "clouds":{
+       "cloud1":{...},
+       "cloud2":{...},
+       ...
+       "cloudn":{...}    
+   }
+}
+```
+Configuration for a single cloud has the form:
+```json
+{
+   "name":"",
+   "region":"",
+   "quotas":{
+       "cores":i,
+       "instances":j
+   },
+   "images":{
+       "id":{
+           "name":"...",
+           "architecture":"...",
+           "distribution":"...",
+           "type":"...",
+           "version":"..."
+        }   
+   },
+   "flavours":{
+       "flavour":{
+           "cores":i,
+           "memory":j
+       } 
+   }
+}
+```
+The image name should be in a form directly useable by IM, for example `gce://europe-west2-c/centos-7` (for Google) or `ost://<openstack-endpoint>/<id>` (for OpenStack). Meta-data is provided for each image to easily enable users to select a standard Linux distribution image at any site, e.g. CentOS 7 or Ubuntu 16.04, without needing to know in advance the image name at each site.
+
 ## Deployment
 
 ## Usage
