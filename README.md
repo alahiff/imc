@@ -15,6 +15,6 @@ IMC uses [Infrastructure Manager](https://github.com/grycap/im) to deploy and co
 
 ![Architecture](imc.png)
 
-IMC allows for "hierarchical cloud bursting". A simple example would be to burst from a single local private cloud to an external private cloud, and to burst from the external private cloud to a public cloud.
+IMC allows for hierarchical cloud bursting. A simple example would be to burst from a single local private cloud to an external private cloud and then to burst from the external private cloud to a public cloud.
 
 ![Hierarchical cloud bursting](cloudbursting.png)
