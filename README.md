@@ -40,8 +40,8 @@ A JSON document in the following form is used to provide static information abou
 Configuration for a single cloud has the form:
 ```json
 {
-   "name":"",
-   "region":"",
+   "name":"...",
+   "region":"...",
    "quotas":{
        "cores":i,
        "instances":j
