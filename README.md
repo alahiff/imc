@@ -17,4 +17,4 @@ IMC uses [Infrastructure Manager](https://github.com/grycap/im) to deploy and co
 
 IMC allows for "hierarchical cloud bursting"
 
-![Hierarchical cloud bursting](hcb.png)
+![Hierarchical cloud bursting](hierarchical-cloud-bursting.png)
