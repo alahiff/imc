@@ -13,7 +13,7 @@ Features include:
 * VM flavour selection can be selected based on cost for the case of a public cloud
 * clouds can be grouped into regions
 
-IMC uses [Infrastructure Manager](https://github.com/grycap/im) to deploy and configure infrastructure on clouds, including OpenStack, AWS, Azure and Google Compute Platform. [Open Policy Agent](https://www.openpolicyagent.org) is used for making decisions about what cloud, VM flavour and image to use.
+IMC uses [Infrastructure Manager](https://github.com/grycap/im) to deploy and configure infrastructure on clouds, including OpenStack, AWS, Azure and Google Compute Platform. [Open Policy Agent](https://www.openpolicyagent.org) is used for making decisions about what clouds, VM flavours and images to use.
 
 ![Architecture](imc.png)
 
