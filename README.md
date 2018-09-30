@@ -1,5 +1,7 @@
 # IMC
 
+## Introduction
+
 It is frequently assumed that when you're using a cloud you have access to an essentially infinite amount of resources, however this is not always the case. IMC is for situations when you have access to multiple small clouds and you need a tool which can deploy and configure virtual infrastructure on automatically-selected clouds, and also automatically handle deployment failures.
 
 Features include:
@@ -18,3 +20,5 @@ IMC uses [Infrastructure Manager](https://github.com/grycap/im) to deploy and co
 IMC allows for hierarchical cloud bursting. A simple example would be to burst from a single local private cloud to an external private cloud and then to burst from the external private cloud to a public cloud.
 
 ![Hierarchical cloud bursting](cloudbursting.png)
+
+## Deployment
