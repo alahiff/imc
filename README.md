@@ -23,7 +23,7 @@ IMC allows for hierarchical cloud bursting. A simple example would be to burst f
 
 ## Deployment
 
-## Setup
+## Setup
 
 ## Usage
 
