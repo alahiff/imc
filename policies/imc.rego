@@ -22,44 +22,44 @@ satisfies_site(requirements, cloud) {
 }
 
 # Images
-satisfies_image_architecture(reqimage, image){
-  reqimage.architecture = image.architecture
+satisfies_image_architecture(image_req, image){
+  image_req.architecture = image.architecture
 }
 
-satisfies_image_architecture(reqimage, image){
-  not reqimage.architecture
+satisfies_image_architecture(image_req, image){
+  not image_req.architecture
 }
 
-satisfies_image_distribution(reqimage, image){
-  reqimage.distribution = image.distribution
+satisfies_image_distribution(image_req, image){
+  image_req.distribution = image.distribution
 }
 
-satisfies_image_distribution(reqimage, image){
-  not reqimage.distribution
+satisfies_image_distribution(image_req, image){
+  not image_req.distribution
 }
 
-satisfies_image_type(reqimage, image){
-  reqimage.type = image.type
+satisfies_image_type(image_req, image){
+  image_req.type = image.type
 }
 
-satisfies_image_type(reqimage, image){
-  not reqimage.type
+satisfies_image_type(image_req, image){
+  not image_req.type
 }
 
-satisfies_image_version(reqimage, image){
-  reqimage.version = image.version
+satisfies_image_version(image_req, image){
+  image_req.version = image.version
 }
 
-satisfies_image_version(reqimage, image){
-  not reqimage.version
+satisfies_image_version(image_req, image){
+  not image_req.version
 }
 
-satisfies_image_name(reqimage, image){
-  reqimage.name = image.name
+satisfies_image_name(image_req, image){
+  image_req.name = image.name
 }
 
-satisfies_image_name(reqimage, image){
-  not reqimage.name
+satisfies_image_name(image_req, image){
+  not image_req.name
 }
 
 satisfies_image(requirements, image) {
@@ -103,28 +103,28 @@ satisfies_quotas(requirements, cloud) {
 # Get list of sites meeting requirements
 sites[site] {
   cloud = clouds[site]
-  myimage = clouds[site]["images"][i]
-  myflavour = clouds[site]["flavours"][j]
+  image = clouds[site]["images"][i]
+  flavour = clouds[site]["flavours"][j]
   satisfies_region(input.requirements, cloud)
   satisfies_site(input.requirements, cloud)
-  satisfies_image(input.requirements, myimage)
-  satisfies_flavour(input.requirements, myflavour)
+  satisfies_image(input.requirements, image)
+  satisfies_flavour(input.requirements, flavour)
   satisfies_quotas(input.requirements, cloud)
 }
 
 # Get images for a specified cloud
 images[name] {
-  myimage = clouds[input.cloud]["images"][image]
-  name = myimage.name
-  satisfies_image(input.requirements, myimage)
+  image = clouds[input.cloud]["images"][i]
+  name = image.name
+  satisfies_image(input.requirements, image)
 }
 
 # Rank flavours for a specified cloud
 flavours[pair] {
-  myflavour =  clouds[input.cloud]["flavours"][flavour]
-  satisfies_flavour(input.requirements, myflavour)
-  weight = flavour_weight(myflavour)
-  pair = {"name":flavour, "weight":weight}
+  flavour =  clouds[input.cloud]["flavours"][i]
+  satisfies_flavour(input.requirements, flavour)
+  weight = flavour_weight(flavour)
+  pair = {"name":flavour.name, "weight":weight}
 }
 
 # Rank sites based on preferences
