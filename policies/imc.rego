@@ -172,5 +172,5 @@ flavour_weight(flavour) = output {
 
 flavour_weight(flavour) = output {
   not flavour.cost
-  product({flavour.cores, flavour.memory}, output)
+  output = flavour.cores * flavour.memory
 }
