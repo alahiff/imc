@@ -117,5 +117,18 @@ imc.py --cores=8 \
        --require-region FedCloud \
        one-node.radl
 ```
-
+Example output:
+```
+Suitable clouds = [INFN-PADOVA-STACK,RECAS-BARI,CESNET-MetaCloud,IN2P3-IRES]
+Attempting to deploy on cloud "INFN-PADOVA-STACK" with image "appdb://INFN-PADOVA-STACK/egi.centos.7?fedcloud.egi.eu" and flavour "4"
+Created infrastructure with id a58b2dea-c755-11e8-a9a6-0242ac110002 on cloud INFN-PADOVA-STACK and waiting for it to be configured
+Infrastructure is in state unconfigured
+Infrastructure is unconfigured, will try reconfiguring once after writing contmsg to a file
+Infrastructure has been unconfigured too many times, so destroying after writing contmsg to a file
+Attempting to deploy on cloud "RECAS-BARI" with image "appdb://RECAS-BARI/egi.centos.7?fedcloud.egi.eu" and flavour "10"
+Created infrastructure with id fafc69a6-c755-11e8-8fa3-0242ac110002 on cloud RECAS-BARI and waiting for it to be configured
+Infrastructure is in state running
+Infrastructure is in state configured
+Successfully configured infrastructure with id: fafc69a6-c755-11e8-8fa3-0242ac110002 on cloud "RECAS-BARI"
+```
 
