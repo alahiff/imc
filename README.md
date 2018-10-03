@@ -69,6 +69,15 @@ The image name should be in a form directly useable by IM, for example `gce://eu
 An example clouds configuration file is provided: `policies/clouds.json`.
 
 ## Deployment
+Deploy Infrastructure Manager following the instructions https://github.com/grycap/im. Alternatively an existing deployment can be used. For testing it is adequate to run the IM Docker container:
+```
+docker run -d --name=im -p 127.0.0.1:8899:8899 grycap/im:1.7.4
+```
+Deploy Open Policy Agent
+```
+docker run -p 127.0.0.1:8181:8181 -v <directory>:/policies --name=opa -d openpolicyagent/opa:latest run --server /policies
+```
+where `<directory>` should be replaced with the path to the directory.on the host containing the policy and data files.
 
 ## Usage
 
