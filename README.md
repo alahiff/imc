@@ -133,7 +133,7 @@ Successfully configured infrastructure with id fafc69a6-c755-11e8-8fa3-0242ac110
 ```
 Here we see that deployment initially failed, but it was successfully deployed on the second cloud tried.
 
-## Deploying a SLURM cluster
+### Deploying a SLURM cluster
 In this example deployment was successful on the first attempt:
 ```
 $ /usr/local/bin/imc.py --image-arch x86_64 --image-dist centos --image-type linux --image-vers 7 --cores=4 --memory=4 --require-region FedCloud slurm.radl
