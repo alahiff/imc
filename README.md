@@ -103,3 +103,18 @@ IM uses Resource and Application Description Language (RADL) files to describe t
 
 ## Usage
 
+### Example
+Here is a very simple RADL file for a single VM on a private network:
+```
+network private()
+
+system node (
+instance_type = '${instance}' and
+net_interface.0.connection = 'private' and
+net_interface.0.dns_name = 'test and
+disk.0.os.name='linux' and
+disk.0.image.url='${image}'
+)
+
+deploy node 1
+```
