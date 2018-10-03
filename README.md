@@ -108,7 +108,15 @@ Some example RADL files are located in the examples directory.
 ### Deploying a single VM
 Using the RADL file `one-node.radl` deploy an 8 core VM with 8 GB memory running CentOS 7:
 ```
-imc.py --dry-run --image-arch x86_64 --image-dist centos --image-type linux --image-vers 7 --cores=8 --memory=8 --require-region FedCloud one-node.radl
+imc.py --dry-run \
+       --image-arch x86_64 \
+       --image-dist centos \
+       --image-type linux \
+       --image-vers 7 \
+       --cores=8 \
+       --memory=8 \
+       --require-region FedCloud \
+       one-node.radl
 ```
 
 
