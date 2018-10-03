@@ -80,5 +80,19 @@ docker run -p 127.0.0.1:8181:8181 -v <directory>:/policies --name=opa -d openpol
 ```
 where `<directory>` should be replaced with the path to the directory on the host containing the policy and data files.
 
+Deploy the IM client. The simplest way to do this is using pip:
+```
+pip install IM-client==1.5.1
+```
+It is important to note that 1.5.2 and 1.5.3 cannot be used as they return incorrect exit codes.
+
+In the home directory of the user which will run IMC, create a file `.im_client.cfg`:
+```
+[im_client]
+xmlrpc_url=http://localhost:8899
+auth_file=/home/cloudadm/.im_auth.dat
+```
+This should be adjusted as necessary to point to the IM XML-RPC service and to the IM client authorization file, which should list all required clouds. See http://www.grycap.upv.es/im/documentation.php for information on what should appear in this file.
+
 ## Usage
 
