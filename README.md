@@ -73,11 +73,12 @@ Deploy Infrastructure Manager following the instructions https://github.com/gryc
 ```
 docker run -d --name=im -p 127.0.0.1:8899:8899 grycap/im:1.7.4
 ```
-Deploy Open Policy Agent
+
+Deploy Open Policy Agent:
 ```
 docker run -p 127.0.0.1:8181:8181 -v <directory>:/policies --name=opa -d openpolicyagent/opa:latest run --server /policies
 ```
-where `<directory>` should be replaced with the path to the directory.on the host containing the policy and data files.
+where `<directory>` should be replaced with the path to the directory on the host containing the policy and data files.
 
 ## Usage
 
