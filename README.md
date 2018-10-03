@@ -129,6 +129,6 @@ Attempting to deploy on cloud "RECAS-BARI" with image "appdb://RECAS-BARI/egi.ce
 Created infrastructure with id fafc69a6-c755-11e8-8fa3-0242ac110002 on cloud RECAS-BARI and waiting for it to be configured
 Infrastructure is in state running
 Infrastructure is in state configured
-Successfully configured infrastructure with id: fafc69a6-c755-11e8-8fa3-0242ac110002 on cloud "RECAS-BARI"
+Successfully configured infrastructure with id "fafc69a6-c755-11e8-8fa3-0242ac110002" on cloud "RECAS-BARI"
 ```
 Here we see that deployment initially failed, but it was successfully deployed on the second cloud tried.
