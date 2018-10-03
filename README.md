@@ -106,7 +106,7 @@ IM uses Resource and Application Description Language (RADL) files to describe t
 Some example RADL files are located in the examples directory.
 
 ### Deploying a single VM
-Using the RADL file `one-node.radl` deploy an 8 core VM with 8 GB memory running CentOS 7:
+Using the RADL file `one-node.radl` deploy an 8 core VM with 8 GB memory running CentOS 7 on a FedCloud site:
 ```
 imc.py --cores=8 \
        --memory=8 \
