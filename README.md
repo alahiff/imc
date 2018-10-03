@@ -2,7 +2,7 @@
 
 ## Overview
 
-It is frequently assumed that when you're using a cloud you have access to an essentially infinite amount of resources, however this is not always the case. IMC is for situations when you have access to multiple small clouds and you need a tool which can deploy and configure virtual infrastructure on automatically-selected clouds, and also automatically handle deployment failures.
+It is frequently assumed that when you're using a cloud you have access to an essentially infinite amount of resources, however this is not always the case. IMC is for situations when you have access to many small clouds and you need a tool which can deploy and configure virtual infrastructure across them.
 
 Features include:
 * selection of clouds which meet specified requirements
