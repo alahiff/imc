@@ -94,5 +94,12 @@ auth_file=/home/cloudadm/.im_auth.dat
 ```
 This should be adjusted as necessary to point to the IM XML-RPC service and to the IM client authorization file, which should list all required clouds. See http://www.grycap.upv.es/im/documentation.php for information on what should appear in this file.
 
+## RADL files
+
+IM uses Resource and Application Description Language (RADL) files to describe the infrastructure to be deployed. IMC must be provided with a RADL file, noting that:
+* `${image}` will be replaced with the disk image name (essential)
+* `${instance}` will be replaced with the instance type (essential)
+* `${cloud}` will be replaced with the name of the cloud
+
 ## Usage
 
