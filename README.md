@@ -103,4 +103,5 @@ IM uses Resource and Application Description Language (RADL) files to describe t
 
 ## Usage
 
-### Example
+Some example RADL files are located in the examples directory.
+
