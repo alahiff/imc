@@ -10,6 +10,11 @@ Features include:
 * clouds are ranked based on specified preferences
   * e.g. I would prefer my VMs to be deployed on my local private cloud, but if that is full try my national research cloud, but if that is also full then use a public cloud
 * if deployment on a cloud fails, another cloud will be automatically tried, and the cloud which failed will temporarily be blacklisted
+* many types of failures and issues are handled automatically, including:
+  * deployment failing completely
+  * infrastructure unable to be configured
+  * infrastructure staying in the "pending" state for too long
+  * infrastructure staying in the "running" state for too long
 * VM flavour selection can be selected based on cost for the case of a public cloud
 * clouds can be grouped into regions
 
