@@ -146,7 +146,7 @@ Infrastructure is in state running
 Infrastructure is in state configured
 Successfully configured infrastructure with id f54b0360-c759-11e8-afad-0242ac110002 on cloud CESNET-MetaCloud
 ```
-In this example deployment on two clouds failed (the first cloud failing gave an error message in French which confused IM client):
+In this example deployment on two clouds failed:
 ```
 [cloudadm@vnode-0 imc]$ /usr/local/bin/imc.py --image-arch x86_64 --image-dist centos --image-type linux --image-vers 7 --cores=4 --memory=4 --require-region FedCloud slurm.radl
 Found 3 instances to deploy
@@ -171,3 +171,4 @@ Infrastructure is in state running
 Infrastructure is in state configured
 Successfully configured infrastructure with id c8787f86-c79d-11e8-8165-0242ac110002 on cloud RECAS-BARI
 ```
+The first cloud failing gave an error message in French which confused IM client. IMC prints the stdout/err to the screen (and to the log file) when creation fails as it can be useful for debugging.
