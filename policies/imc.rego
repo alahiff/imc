@@ -147,6 +147,11 @@ recent_failures(site) = output {
 }
 
 recent_failures(site) = output {
+  timenow_secs - status[site][i]["epoch"] >= 3600
+  output = 0
+}
+
+recent_failures(site) = output {
   not status[site]
   output = 0
 }
