@@ -119,6 +119,7 @@ imc.py --cores=8 \
 ```
 Example output:
 ```
+Found 1 instances to deploy
 Suitable clouds = [INFN-PADOVA-STACK,RECAS-BARI,CESNET-MetaCloud,IN2P3-IRES]
 Attempting to deploy on cloud "INFN-PADOVA-STACK" with image "appdb://INFN-PADOVA-STACK/egi.centos.7?fedcloud.egi.eu" and flavour "4"
 Created infrastructure with id a58b2dea-c755-11e8-a9a6-0242ac110002 on cloud INFN-PADOVA-STACK and waiting for it to be configured
@@ -137,10 +138,36 @@ Here we see that deployment initially failed, but it was successfully deployed o
 In this example deployment was successful on the first attempt:
 ```
 $ /usr/local/bin/imc.py --image-arch x86_64 --image-dist centos --image-type linux --image-vers 7 --cores=4 --memory=4 --require-region FedCloud slurm.radl
+Found 1 instances to deploy
 Suitable clouds = [CESNET-MetaCloud,IN2P3-IRES,INFN-PADOVA-STACK,RECAS-BARI]
 Attempting to deploy on cloud "CESNET-MetaCloud" with image "appdb://CESNET-MetaCloud/egi.centos.7?fedcloud.egi.eu" and flavour "large"
 Created infrastructure with id f54b0360-c759-11e8-afad-0242ac110002 on cloud CESNET-MetaCloud and waiting for it to be configured
 Infrastructure is in state running
 Infrastructure is in state configured
 Successfully configured infrastructure with id f54b0360-c759-11e8-afad-0242ac110002 on cloud CESNET-MetaCloud
+```
+In this example deployment on two clouds failed (the first cloud failing gave an error message in French which confused IM client):
+```
+[cloudadm@vnode-0 imc]$ /usr/local/bin/imc.py --image-arch x86_64 --image-dist centos --image-type linux --image-vers 7 --cores=4 --memory=4 --require-region FedCloud slurm.radl
+Found 3 instances to deploy
+Suitable clouds = [IN2P3-IRES,INFN-PADOVA-STACK,RECAS-BARI,CESNET-MetaCloud]
+Attempting to deploy on cloud "IN2P3-IRES" with image "appdb://IN2P3-IRES/egi.centos.7?fedcloud.egi.eu" and flavour "4"
+Infrastructure creation failed
+Connected with: http://localhost:8899
+
+Traceback (most recent call last):
+  File "/usr/local/bin/im_client.py", line 363, in <module>
+    print("ERROR creating the infrastructure: %s" % inf_id)
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xe9' in position 133: ordinal not in range(128)
+
+Attempting to deploy on cloud "INFN-PADOVA-STACK" with image "appdb://INFN-PADOVA-STACK/egi.centos.7?fedcloud.egi.eu" and flavour "3"
+Created infrastructure with id 8455e212-c79d-11e8-90cb-0242ac110002 on cloud INFN-PADOVA-STACK and waiting for it to be configured
+Infrastructure is in state failed
+Infrastructure creation failed, so destroying
+Attempting to deploy on cloud "RECAS-BARI" with image "appdb://RECAS-BARI/egi.centos.7?fedcloud.egi.eu" and flavour "9"
+Created infrastructure with id c8787f86-c79d-11e8-8165-0242ac110002 on cloud RECAS-BARI and waiting for it to be configured
+Infrastructure is in state pending
+Infrastructure is in state running
+Infrastructure is in state configured
+Successfully configured infrastructure with id c8787f86-c79d-11e8-8165-0242ac110002 on cloud RECAS-BARI
 ```
