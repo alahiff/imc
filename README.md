@@ -12,9 +12,8 @@ Features include:
 * if deployment on a cloud fails, another cloud will be automatically tried, and the cloud which failed will temporarily be blacklisted
 * many types of failures and issues are handled automatically, including:
   * deployment failing completely
-  * infrastructure unable to be configured
-  * infrastructure staying in the "pending" state for too long
-  * infrastructure staying in the "running" state for too long
+  * contextualization failure
+  * infrastructure taking too long to deploy
 * VM flavour selection can be selected based on cost for the case of a public cloud
 * clouds can be grouped into regions
 
