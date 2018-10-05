@@ -63,12 +63,22 @@ Configuration for a single cloud has the form:
        "<id>":{
            "name":"<name>",
            "cores":i,
-           "memory":j
+           "memory":j,
+           "tags":{
+           },
        } 
    }
 }
 ```
 The image name should be in a form directly useable by IM, for example `gce://europe-west2-c/centos-7` (for Google) or `ost://<openstack-endpoint>/<id>` (for OpenStack). Meta-data is provided for each image to easily enable users to select a standard Linux distribution image at any site, e.g. CentOS 7 or Ubuntu 16.04, without needing to know in advance the image name at each site.
+
+Each flavour has an optional `tags`, which should contain key-value pairs. This can be used to specify additional information about the VM flavour, for example:
+```json
+"tags":{
+    "infiniband":"true"
+}
+```
+Tags can be taken into account with requirements and preferences.
 
 An example clouds configuration file is provided: `policies/clouds.json`.
 
